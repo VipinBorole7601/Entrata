@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.log4testng.Logger;
@@ -45,7 +46,7 @@ public class Base {
         return driver;
     }
 
-   // @AfterClass
+    @AfterClass
     public WebDriver setDown()
     {
         if (driver != null) {
