@@ -1,14 +1,13 @@
 package Test;
 
 import Base.Base;
-import POM.mainPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 
 public class Test_Entrata_Landing_Page  extends Base {
 
-    mainPage mp;
+
 
     private static final Logger logger = Logger.getLogger(Test_Entrata_Landing_Page.class);
 
@@ -20,11 +19,6 @@ public class Test_Entrata_Landing_Page  extends Base {
          currunt_url.equals("https://www.entrata.com/");
          Assert.assertEquals(currunt_url,"https://www.entrata.com/" , "URL is matched");
          System.out.println("Currunt URL is correct matched with expected");
-
-         mp = new mainPage(driver);
-         mp.closePrivacyPolicyPopup();
-
-
 
     }
 
