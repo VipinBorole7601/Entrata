@@ -5,12 +5,19 @@
     <listeners>
         <listener class-name="ExtentReport.ExtentReport"/>
     </listeners>
-
+    <parameter name="browser" value="chrome"></parameter>
     <test verbose="2" preserve-order="true" name="C:/Users/vipin/Intellij Projects/Entrata">
-        <parameter name="browser" value="chrome"></parameter>
-        <classes>
-            <class name="Test.Test_Entrata_Landing_Page">
-        </class>
+       <classes>
+            <class
+                    name="Test.Test_Entrata_Landing_Page">
+           </class>
+            <class
+                    name="Test.Test_User_Registration_For_First_Webinar">
+            </class>
+            <class
+                    name="Test.Test_AI_and_Automation_Suite_Demo">
+            </class>
+            <class name="Test.Test_Automated_Leasing"></class>
         </classes>
     </test>
 </suite>
