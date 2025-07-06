@@ -2,12 +2,15 @@ package Test;
 
 import Base.Base;
 import POM.mainPage_Register_WebinarPOM;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 
 public class Test_User_Registration_For_First_Webinar extends Base {
     mainPage_Register_WebinarPOM mp;
+
+    WebDriverWait wait;
     private static final Logger logger = Logger.getLogger(Test_Entrata_Landing_Page.class);
 
     @Test(priority = 3 ,description = "verify CurruntUrl of the page")
@@ -50,11 +53,6 @@ public class Test_User_Registration_For_First_Webinar extends Base {
         logger.info("validate and fill the registration form and land back on main page");
         mp.click_And_click_to_Register_of_First_Webinar();
 
-        try {
-            wait(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
 
     }
     @Test(priority = 7 ,description = "fill the registration form and comeback to main page")
